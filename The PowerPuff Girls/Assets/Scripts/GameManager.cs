@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI counterText;
     public TextMeshProUGUI timerText;
 
+    [Header("Porta")]
+    public ExitDoor exitDoor;
+
     [Header("Objetos da fase")]
     public int totalSpatulas = 3;
     public int totalBurgers = 3;
@@ -94,5 +97,10 @@ public class GameManager : MonoBehaviour
    public bool IsGameFinished()
 {
     return gameFinished;
+}
+public bool AllObjectsCollected()
+{
+    return spatulasCollected >= totalSpatulas &&
+           burgersCollected >= totalBurgers;
 }
 }

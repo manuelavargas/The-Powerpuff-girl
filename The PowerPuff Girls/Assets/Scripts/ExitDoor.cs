@@ -2,48 +2,31 @@ using UnityEngine;
 
 public class ExitDoor : MonoBehaviour
 {
-    private bool doorUnlocked = false;
-
-    private bool bobInside = false;
-    private bool patrickInside = false;
-
-    public void UnlockDoor()
-    {
-        doorUnlocked = true;
-
-        Debug.Log("PORTA LIBERADA!");
-    }
+    public PlayerMovement.CharacterType characterAllowed;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!doorUnlocked)
-            return;
-
         PlayerMovement player = other.GetComponent<PlayerMovement>();
 
         if (player == null)
             return;
 
-        if (player.characterType == PlayerMovement.CharacterType.Bob)
+        // A porta só funciona quando TODOS os objetos foram coletados
+        if (!GameManager.Instance.AllObjectsCollected())
+            return;
+
+        // Verifica se é o personagem correto para esta porta
+        if (player.characterType != characterAllowed)
+            return;
+
+        if (characterAllowed == PlayerMovement.CharacterType.Bob)
         {
-            bobInside = true;
-            Debug.Log("BOB CHEGOU NA PORTA!");
+            Debug.Log("BOB ENTROU NA PORTA DELE!");
         }
 
-        if (player.characterType == PlayerMovement.CharacterType.Patrick)
+        if (characterAllowed == PlayerMovement.CharacterType.Patrick)
         {
-            patrickInside = true;
-            Debug.Log("PATRICK CHEGOU NA PORTA!");
-        }
-
-        CheckPlayers();
-    }
-
-    private void CheckPlayers()
-    {
-        if (bobInside && patrickInside)
-        {
-            Debug.Log("FASE CONCLUÍDA!");
+            Debug.Log("PATRICK ENTROU NA PORTA DELE!");
         }
     }
 }
