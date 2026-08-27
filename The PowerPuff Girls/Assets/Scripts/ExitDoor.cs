@@ -11,22 +11,26 @@ public class ExitDoor : MonoBehaviour
         if (player == null)
             return;
 
-        // A porta só funciona quando TODOS os objetos foram coletados
+        // A porta só funciona depois que TODOS os objetos foram coletados
         if (!GameManager.Instance.AllObjectsCollected())
             return;
 
-        // Verifica se é o personagem correto para esta porta
+        // Verifica se é o personagem correto
         if (player.characterType != characterAllowed)
             return;
 
         if (characterAllowed == PlayerMovement.CharacterType.Bob)
         {
-            Debug.Log("BOB ENTROU NA PORTA DELE!");
+            Debug.Log("BOB CHEGOU NA PORTA DELE!");
+
+            GameManager.Instance.BobReachedDoor();
         }
 
         if (characterAllowed == PlayerMovement.CharacterType.Patrick)
         {
-            Debug.Log("PATRICK ENTROU NA PORTA DELE!");
+            Debug.Log("PATRICK CHEGOU NA PORTA DELE!");
+
+            GameManager.Instance.PatrickReachedDoor();
         }
     }
 }
