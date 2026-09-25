@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI counterText;
     public TextMeshProUGUI timerText;
+    public GameObject panelVitoria;
 
 
     // =====================================================
@@ -228,7 +229,13 @@ public class GameManager : MonoBehaviour
 
         // Os dois chegaram!
         Debug.Log("================================");
-        Debug.Log("🎉 FASE 1 CONCLUÍDA!");
+        Debug.Log("FASE 1 CONCLUÍDA!");
         Debug.Log("================================");
+
+        // Para o timer
+        gameFinished = true;
+
+        // Mostra a tela de vitória
+        panelVitoria.SetActive(true);
     }
 }
