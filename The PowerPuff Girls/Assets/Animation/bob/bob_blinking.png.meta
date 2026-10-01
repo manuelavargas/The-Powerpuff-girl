@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e253630dcf50fb64f8a76d7839c2c618
+guid: 3f6f89f6cd20bdf4c9c4fcececf13653
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -44,12 +44,12 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 25
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -96,8 +96,8 @@ TextureImporter:
       name: bob_blinking_0
       rect:
         serializedVersion: 2
-        x: 171
-        y: 994
+        x: 239
+        y: 880
         width: 29
         height: 35
       alignment: 0
@@ -107,8 +107,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b315430841b4b0d4eabc0c4d5eaa54fa
-      internalID: -1689074392
+      spriteID: 5b2adba1f2e1a0340805e8f967565c1e
+      internalID: -1704543816
       vertices: []
       indices: 
       edges: []
@@ -117,10 +117,10 @@ TextureImporter:
       name: bob_blinking_1
       rect:
         serializedVersion: 2
-        x: 205
-        y: 994
+        x: 273
+        y: 880
         width: 29
-        height: 35
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad3327fdf3cd65f40ae965b00dab1136
-      internalID: -1832235003
+      spriteID: 73fddd2e7e222d548aeec73b2538ac4a
+      internalID: -267412906
       vertices: []
       indices: 
       edges: []
@@ -138,10 +138,10 @@ TextureImporter:
       name: bob_blinking_2
       rect:
         serializedVersion: 2
-        x: 239
-        y: 994
+        x: 307
+        y: 880
         width: 29
-        height: 35
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,8 +149,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86e3ccbadbf62f44d88404f71279ae67
-      internalID: 501979245
+      spriteID: 81038ad3825e3d84d9e73093d87f436f
+      internalID: 1296777956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_blinking_3
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 880
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e54b6c31b04634ab988eba6da53aeb
+      internalID: -1964655657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_blinking_4
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 880
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e12933e92448d64f8c106e1d6a88549
+      internalID: 2132927657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_blinking_5
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 880
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133afae18a66dcd40b51133014fb4283
+      internalID: -47587540
       vertices: []
       indices: 
       edges: []
@@ -166,9 +229,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bob_blinking_0: -1689074392
-      bob_blinking_1: -1832235003
-      bob_blinking_2: 501979245
+      bob_blinking_0: -1704543816
+      bob_blinking_1: -267412906
+      bob_blinking_2: 1296777956
+      bob_blinking_3: -1964655657
+      bob_blinking_4: 2132927657
+      bob_blinking_5: -47587540
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
