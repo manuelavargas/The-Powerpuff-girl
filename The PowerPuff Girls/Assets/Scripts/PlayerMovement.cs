@@ -1,14 +1,15 @@
+
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     public enum CharacterType
-{
-    Bob,
-    Patrick
-}
+    {
+        Bob,
+        Patrick
+    }
 
-public CharacterType characterType;
+    public CharacterType characterType;
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
 
@@ -17,11 +18,13 @@ public CharacterType characterType;
     public KeyCode jumpKey;
 
     private Rigidbody2D rb;
+    private Animator animator;
     private bool isGrounded;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -34,7 +37,15 @@ public CharacterType characterType;
         if (Input.GetKey(rightKey))
             horizontal = 1f;
 
-        rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(
+            horizontal * moveSpeed,
+            rb.velocity.y
+        );
+
+        if (animator != null)
+        {
+            animator.SetFloat("Speed", Mathf.Abs(horizontal));
+        }
 
         if (Input.GetKeyDown(jumpKey) && isGrounded)
         {
