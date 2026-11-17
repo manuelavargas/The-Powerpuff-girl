@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 267809515}
   - component: {fileID: 267809514}
   - component: {fileID: 267809513}
+  - component: {fileID: 267809518}
   m_Layer: 0
   m_Name: patrick
   m_TagString: Untagged
@@ -292,9 +293,13 @@ MonoBehaviour:
   characterType: 1
   moveSpeed: 5
   jumpForce: 10
+  crawlSpeed: 2
   leftKey: 276
   rightKey: 275
   jumpKey: 273
+  crouchKey: 0
+  tempoMinimo: 3
+  tempoMaximo: 6
 --- !u!61 &267809514
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -312,7 +317,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.0454545, y: 2.1818182}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -383,8 +388,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.8867924, g: 0.065254435, b: 0.69136596, a: 1}
+  m_Sprite: {fileID: 1020514910, guid: 9d8f6c40ef469264b9aa3a9de9281b26, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -402,13 +407,34 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267809512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.41727206, y: -0.84, z: 0}
+  m_LocalPosition: {x: -1.24, y: -0.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &267809518
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267809512}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c1131b4a6b122534895fb46fc77993cd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &361848388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,7 +1270,6 @@ GameObject:
   - component: {fileID: 996238552}
   - component: {fileID: 996238551}
   - component: {fileID: 996238556}
-  - component: {fileID: 996238557}
   m_Layer: 0
   m_Name: bob esponja
   m_TagString: Untagged
@@ -1267,9 +1292,13 @@ MonoBehaviour:
   characterType: 0
   moveSpeed: 5
   jumpForce: 10
+  crawlSpeed: 2
   leftKey: 97
   rightKey: 100
   jumpKey: 119
+  crouchKey: 115
+  tempoMinimo: 3
+  tempoMaximo: 6
 --- !u!61 &996238552
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1287,8 +1316,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.12, y: 1.52}
-    newSize: {x: 0.29, y: 0.35}
+    oldSize: {x: 1.2083334, y: 1.4583334}
+    newSize: {x: 1.16, y: 1.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1358,12 +1387,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -535349130, guid: d38cde53c27f82247b8fa2530a97d46f, type: 3}
+  m_Sprite: {fileID: 1910523284, guid: e8137e5c7a0c7ba4cba0e0ace367b84c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.29, y: 0.35}
+  m_Size: {x: 1.16, y: 1.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1405,21 +1434,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &996238557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996238550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43e5c54a05be122488d4ccb6ae6c57ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 996238556}
-  tempoMinimo: 3
-  tempoMaximo: 6
 --- !u!1 &1138849258
 GameObject:
   m_ObjectHideFlags: 0
